@@ -1,7 +1,7 @@
 # PTInfoHelper
 用于生成、预览与保存PT站发种页的BBCode，支持PTGen，适用于同一个种子多站转发，配合[auto_feed](https://github.com/tomorrow505/auto_feed_js)食用更佳
 
-<a href="https://imgbox.com/5dgpx3Y9" target="_blank"><img src="https://images2.imgbox.com/7c/59/5dgpx3Y9_o.png" alt="image host"/></a>
+<img src="https://images2.imgbox.com/9a/e8/JpTqBIah_o.png" alt="image host"/>
 
 ### 主要功能
 
