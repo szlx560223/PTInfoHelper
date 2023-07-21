@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT转种助手</title>
+</head>
+<script src="js/jquery-3.7.0.min.js"></script>
+<script src="js/main.js"></script>
+<style>
+    @import url(css/main.css);
+</style>
+<body>
+    <div class="main">
+        <div class="card">
+            <span>PTGen</span>
+            <div class="ptgen">
+                <input id="Input" placeholder="IMDB编号(tt12345678) & 豆瓣编号(12345678)" style="width: 300px;"/>
+                <button onclick="PTGen()">PTGen</button>
+                <span id="Notice"></span>
+            </div>
+            <span id="spanNote">转种备注</span>
+            <textarea name="Note" id="Note" cols="50" rows="5"></textarea>
+            <span id="spanPost">海报</span>
+            <textarea name="Poster" id="Poster" cols="50" rows="3"></textarea>
+            <span id="spanIntro">简介</span>
+            <textarea name="Description" id="Description" cols="50" rows="10"></textarea>
+            <span id="spanInfo">INFO</span>
+            <textarea name="MediaInfo" id="MediaInfo" cols="50" rows="10"></textarea>
+            <span id="spanPic">预览图</span>
+            <textarea name="Images" id="Images" cols="50" rows="5"></textarea>
+            <div class="button">
+                <button onclick="Generate()">生成</button>
+                <button onclick="Clear()">清空</button>
+            </div>
+        </div>
+        <div class="card">
+            <span>输出</span>
+            <textarea name="Output" id="Output" cols="50" rows="50"></textarea> 
+            <div class="button">
+                <button onclick="Preview()">预览</button>
+                <button onclick="Copy()">复制</button>
+                <button onclick="Export()" id="ExportBtn">导出</button>
+            </div>
+        </div>
+        <div class="card">
+            <span style="text-align: center;margin-left: 0px;">预览</span>
+            <div id="Preview" class="preview">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

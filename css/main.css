@@ -1,0 +1,78 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 900px;
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+textarea{
+    margin: 10px;
+    margin-top: 5px;
+    resize: none;
+}
+span{
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+button{
+    margin-right: 30px;
+    width: 120px;
+    height: 25px;
+    font-size: large;
+    font-weight: bolder;
+}
+.button{
+    align-self: center;
+    margin: 5px;
+}
+fieldset{
+    display: block;
+    margin-inline-start: 2px;
+    margin-inline-end: 2px;
+    padding-block-start: 0.35em;
+    padding-inline-start: 0.75em;
+    padding-inline-end: 0.75em;
+    padding-block-end: 0.625em;
+    min-inline-size: min-content;
+    border-width: 2px;
+    border-style: groove;
+    border-color: rgb(192, 192, 192);
+    border-image: initial;
+}
+.preview{
+    margin: 10px;
+    max-height:750px;
+    overflow-y:auto;
+    overflow-wrap:break-word
+
+}
+img {  
+    width: 550px;  
+    height: auto;  
+  }
+.ptgen{
+    margin: 10px;
+}
+.success{
+    color: green;
+}
+.fail{
+    color: red;
+}
+.warn{
+    color: orange;
+}
+
