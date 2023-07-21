@@ -1,16 +1,6 @@
-$(function () {
-  Init();
-});
-
-function Init() {
-
-
-
-}
 function PTGen() {
   if (isInputValid()) {
     $.post("https://api.iyuu.cn/index.php", {
-      // 在这里添加你要发送的数据  
       "service": "App.Movie.Ptgen",
       "url": $('#Input').val()
     }, function (data, status) {
@@ -40,13 +30,13 @@ function PTGen() {
   }
 }
 function ProcessData(str) {
-  var pattern = /\[img\].*?\[\/img\]/;
+  var pattern = /\[img\].*?\[\/img\]/;//匹配完整img标签
 
   let image = pattern.exec(str);
 
-  if (image !== null) {
-    str = str.replace(pattern, '');
-    var regex = /\[img\](.*?)\[\/img\]/i;
+  if (image !== null) {//如果存在
+    str = str.replace(pattern, '');//原先的抹掉
+    var regex = /\[img\](.*?)\[\/img\]/i;//匹配图片链接
     var match = image[0].match(regex);
     // 如果匹配成功，则获取图片链接  
     if (match) {
@@ -55,7 +45,7 @@ function ProcessData(str) {
     } else {
       console.log('未找到图片链接');
     }
-    $('#Description').val(str);
+    $('#Description').val(str);//赋值
 
 
   } else {
@@ -67,7 +57,7 @@ function ProcessData(str) {
 
 function isInputValid() {
   var text = $('#Input').val();
-  var pattern = /(tt)?[0-9]+/;
+  var pattern = /(tt)?[0-9]{6,9}/;//匹配豆瓣编号或IMDB编号
   if (pattern.exec(text) !== null) {
     return true;
   } else {
@@ -210,18 +200,18 @@ function bbcodeToHtml(bbcode) {
   return bbcode;
 }
 function Preview() {
-  var preview = $('#Preview').empty();
+  var preview = $('#Preview').empty();//清空预览页
   var text = $('#Output').val();
-  text = bbcodeToHtml(text);
+  text = bbcodeToHtml(text);//bbcode转html
   $('#Preview').append(text);
 }
 
 function Copy() {
   var text = $('#Output').val();
   navigator.clipboard.writeText(text).then(function () {
-    console.log('复制成功！');
+    alert('复制成功！');
   }, function (err) {
-    console.error('复制失败：', err);
+    alert('复制失败!');
   });
 }
 
